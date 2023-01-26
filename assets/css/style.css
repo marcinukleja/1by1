@@ -1,0 +1,211 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto Mono&display=swap");
+
+:root {
+  /* Font */
+  --font-family-default: "Inter", "Helvetica", sans-serif;
+  --font-family-mono: "Roboto Mono", fixed;
+  --font-size-s: 11px;
+  --font-size-m: 14px;
+  --font-size-l: 18px;
+  --font-size-xl: 22px;
+  --font-line-height-s: 16px;
+  --font-line-height-m: 24px;
+  --font-line-height-l: 32px;
+  --font-line-height-xl: 48px;
+  --font-weight-default: 400;
+  --font-weight-strong: 600;
+  /* Dimensions */
+  --dimension-1: 1px;
+  --dimension-2: 2px;
+  --dimension-xs: 4px;
+  --dimension-s: 8px;
+  --dimension-m: 16px;
+  --dimension-l: 24px;
+  --dimension-xl: 32px;
+  /* Color - background */
+  --figma-color-bg: rgba(255, 255, 255, 1);
+  --figma-color-bg-secondary: #f5f5f5;
+  --figma-color-bg-tertiary: #e6e6e6;
+  --figma-color-bg-brand-tertiary: #e5f4ff;
+  --figma-color-bg-inverse: #2c2c2c;
+  --color-bg-mid: #cccccc;
+  /* Color - border */
+  --figma-color-border: #e6e6e6;
+  --figma-color-border-strong: #2c2c2c;
+  --color-border-mid: #dddddd;
+  /* Color - text */
+  --figma-color-text: rgba(0, 0, 0, 0.9);
+  --figma-color-text-oninverse: rgba(255, 255, 255, 0.9);
+}
+
+html {
+  background-color: var(--figma-color-bg-secondary);
+}
+
+body {
+  background-color: var(--figma-color-bg);
+  color: var(--figma-color-text);
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-default);
+  line-height: var(--font-line-height-m);
+  margin: 0 auto;
+  padding: var(--dimension-m);
+  text-align: left;
+  max-width: 392px;
+  counter-reset: task;
+}
+
+body * {
+  background-color: transparent;
+  color: var(--figma-color-text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: beige;
+}
+
+/* BLOCKS */
+
+h1 {
+  margin: var(--dimension-l) 0 var(--dimension-m) 0;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-height-xl);
+  font-weight: var(--font-weight-strong);
+  counter-reset: task;
+
+  /* border-top: var(--dimension-1) solid var(--figma-color-border); */
+}
+
+h2 {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-strong);
+  line-height: var(--font-line-height-l);
+  margin-bottom: var(--dimension-m);
+  margin-top: var(--dimension-xl);
+  padding-top: var(--dimension-l);
+  padding-left: var(--dimension-xl);
+  border-top: var(--dimension-1) solid var(--figma-color-border);
+}
+
+h2::before {
+  /* counter-set: task 14; */
+  background-color: var(--figma-color-bg-inverse);
+  border-radius: var(--dimension-xs);
+  color: var(--figma-color-text-oninverse);
+  content: counter(task);
+  counter-increment: task;
+  display: inline-block;
+  height: var(--dimension-l);
+  margin-left: calc(0px - var(--dimension-xl));
+  margin-right: var(--dimension-s);
+  text-align: center;
+  vertical-align: text-bottom;
+  width: var(--dimension-l);
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-height-m);
+}
+
+p {
+  margin: 0 0 var(--dimension-m) 0;
+}
+
+ol,
+ul {
+  padding: 0;
+  counter-reset: step;
+}
+
+li {
+  list-style: none;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: var(--dimension-m);
+  margin-left: var(--dimension-xl);
+}
+
+li::before {
+  background-color: var(--figma-color-bg-tertiary);
+  border-radius: var(--dimension-l);
+  display: inline-block;
+  margin-left: calc(0px - var(--dimension-xl));
+  margin-right: var(--dimension-s);
+  text-align: center;
+  width: var(--dimension-l);
+}
+
+li li {
+  margin-top: var(--dimension-m);
+}
+
+ol li::before {
+  content: counter(step);
+  counter-increment: step;
+  height: var(--dimension-l);
+  text-align: center;
+}
+
+ul li::before {
+  content: "";
+  height: var(--dimension-xs);
+  margin-bottom: 3px;
+}
+
+blockquote {
+  padding: var(--dimension-s) var(--dimension-m);
+  margin: var(--dimension-m) 0;
+  background-color: var(--figma-color-bg-secondary);
+  border-radius: var(--dimension-xs);
+  /* border: var(--dimension-1) solid var(--color-border-mid); */
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  border: none;
+  height: var(--dimension-1);
+  background-color: var(--figma-color-border);
+  margin: var(--dimension-m) 0;
+}
+
+/* SPANS */
+
+strong {
+  font-weight: var(--font-weight-strong);
+}
+
+em {
+  /* border: var(--dimension-1) solid var(--figma-color-border);
+  border-radius: var(--dimension-2);
+  padding: 0 var(--dimension-xs);
+  font-style: normal;
+  background-color: var(--figma-color-bg-secondary); */
+}
+
+code {
+  font-family: var(--font-family-mono);
+  border: var(--dimension-1) solid var(--figma-color-border);
+  border-radius: var(--dimension-xs);
+  padding: 0 var(--dimension-xs);
+}
+
+code strong,
+strong code {
+  display: inline-block;
+  min-width: var(--font-line-height-m);
+  text-align: center;
+  font-family: var(--font-family-default);
+  background-color: var(--color-bg-mid);
+  border-radius: var(--dimension-xs);
+  padding: 0 var(--dimension-xs);
+  font-style: normal;
+  margin: 0 var(--dimension-2);
+  font-weight: var(--font-weight-strong);
+  border: none;
+}

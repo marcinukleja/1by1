@@ -1,0 +1,16 @@
+<nav>
+  <h1>Navigation</h1>
+
+  <hr>
+
+  {% assign collection = site.collections | where: 'label', 'lessons' | first %}
+  {% assign groupedDocs = collection.docs | group_by_exp: 'item', "item.path | split: '/' | slice: 1, 1" %}
+  <p>{{ groupedDocs }}</p>
+  <ul>
+    {% for group in groupedDocs %}
+      {% unless group.name == '' %}
+        <li>{{ group.items[0].title }}</li>
+      {% endunless %}
+    {% endfor %}
+  </ul>
+</nav>
