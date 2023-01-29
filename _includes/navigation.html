@@ -39,7 +39,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="{{site.baseurl}}">Home</a></h2>
+    <h2><a href="{{site.url}}">Home</a></h2>
 
     {% assign chapters = site.collections | where_exp: 'collection', "collection.label != 'posts'" %}
 
