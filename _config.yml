@@ -1,4 +1,4 @@
-baseurl: "1by1"
+baseurl: "/1by1"
 url: http://marcinukleja.github.io
 
 collections:
