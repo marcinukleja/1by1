@@ -1,0 +1,35 @@
+footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--color-bg-default);
+    height: var(--dimension-bar);
+    padding: var(--dimension-m);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: var(--dimension-1) solid var(--color-fg-default-tertiary);
+}
+
+footer a#prevLessonButton {
+    padding: var(--dimension-s) var(--dimension-m);
+    margin-left: calc(0px - var(--dimension-m));
+    color: var(--color-fg-active-primary);
+    border-radius: var(--dimension-s);
+}
+
+footer a#prevLessonButton::before {
+    content: "←";
+    margin-right: var(--dimension-s);
+}
+
+footer a#nextLessonButton {
+    padding: var(--dimension-s) var(--dimension-m);
+    background-color: var(--color-bg-ondefault-active-base);
+    color: var(--color-fg-inverse-primary);
+    border-radius: var(--dimension-s);
+}
+
+footer a#nextLessonButton::after {
+    content: "→";
+    margin-left: var(--dimension-s);
+}

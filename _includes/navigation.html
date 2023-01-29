@@ -1,16 +1,60 @@
-<nav>
-  <h1>Navigation</h1>
+<nav id="navigation">
+  <!-- BAR -->
 
-  <hr>
+  <div id="bar">
+    <!-- CHAPTER TITLE -->
 
-  {% assign collection = site.collections | where: 'label', 'lessons' | first %}
-  {% assign groupedDocs = collection.docs | group_by_exp: 'item', "item.path | split: '/' | slice: 1, 1" %}
-  <p>{{ groupedDocs }}</p>
-  <ul>
-    {% for group in groupedDocs %}
-      {% unless group.name == '' %}
-        <li>{{ group.items[0].title }}</li>
-      {% endunless %}
+    {% assign currentChapter = site.collections
+      | where_exp: 'collection', 'collection.label == page.collection'
+      | first
+    %}
+
+    <div id="chapterTitle">
+      {{ currentChapter.docs[0].title }}
+      <button id="menuButton"></button>
+    </div>
+    <!-- PROGRESS BAR -->
+
+    {% if page.url == currentChapter.docs[0].url %}
+      {% assign isLessonDone = false %}
+    {% else %}
+      {% assign isLessonDone = true %}
+    {% endif %}
+
+    <div id="progressBar">
+      {% assign lessons = currentChapter.docs | shift %}
+      {% for lesson in lessons %}
+        {% if isLessonDone %}
+          <a href="{{ lesson.url }}" class="done"></a>
+        {% else %}
+          <a href="{{ lesson.url }}" class="to-do"></a>
+        {% endif %}
+        {% if lesson.url == page.url %}
+          {% assign isLessonDone = false %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- LIST -->
+
+  <div id="list">
+    <h2><a href="{{site.url}}">Home</a></h2>
+
+    {% assign chapters = site.collections | where_exp: 'collection', "collection.label != 'posts'" %}
+
+    {% for chapter in chapters %}
+      <h2>
+        <a href="{{ chapter.docs[0].url }}" class="done"> {{ chapter.docs[0].title }}</a>
+      </h2>
+      <ul>
+        {% assign lessons = chapter.docs | shift %}
+        {% for lesson in lessons %}
+          <li>
+            <a href="{{ lesson.url }}">{{ lesson.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
     {% endfor %}
-  </ul>
+  </div>
 </nav>

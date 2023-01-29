@@ -1,0 +1,149 @@
+nav {
+    background-color: var(--figma-color-bg-inverse);
+    position: sticky;
+    top: 0
+}
+
+
+nav * {
+    -webkit-user-select: none;
+    user-select: none;
+    color: var(--figma-color-text-oninverse);
+}
+
+/* BAR */
+
+nav #bar {
+    background-color: var(--figma-color-bg-inverse);
+    padding: var(--dimension-s) var(--dimension-m);
+    position: sticky;
+    top: 0;
+    height: var(--dimension-bar);
+    border-bottom: var(--dimension-1) solid transparent;
+    transition: all 0.4s ease-out;
+}
+
+nav.expanded #bar {
+    border-bottom: var(--dimension-1) solid var(--color-fg-oninverse-default-tertiary);
+}
+
+#chapterTitle {
+    display: flex;
+    gap: var(--dimension-m);
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: var(--font-weight-strong);
+    color: var(--color-fg-oninverse-default-primary);
+    cursor: pointer;
+}
+
+#chapterTitle #menuButton {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    font-size: var(--font-size-l);
+    cursor: pointer;
+}
+
+#menuButton::before {
+    content: "⬒";
+}
+
+nav.expanded #menuButton::before {
+    content: "✗";
+}
+
+/* PROGRESS BAR */
+
+#progressBar {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: var(--dimension-xs);
+    width: 100%;
+    height: var(--dimension-s);
+    margin: var(--dimension-s) 0;
+}
+
+#progressBar a {
+    flex: 1;
+    border-radius: var(--dimension-s);
+}
+
+#progressBar .done {
+    background-color: var(--color-fg-oninverse-default-primary);
+}
+
+#progressBar .to-do {
+    background-color: var(--color-fg-oninverse-default-tertiary);
+}
+
+/* LIST */
+
+nav #list {
+    padding-left: var(--dimension-m);
+    padding-right: var(--dimension-m);
+    padding-bottom: 0;
+    height: 0;
+    overflow-y: scroll;
+    width: 100%;
+    transition: all 0.4s ease-out;
+}
+
+nav.expanded #list {
+    height: 512px;
+    max-height: calc(100vh - var(--dimension-bar));
+}
+
+nav li a {
+    color: var(--color-fg-oninverse-default-primary);
+    text-decoration: none;
+}
+
+nav li a:hover,
+nav h2 a:hover {
+    color: var(--color-fg-oninverse-active-primary);
+}
+
+nav h2,
+nav h2 * {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-strong);
+    margin-top: var(--dimension-m);
+    margin-bottom: var(--dimension-s);
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    line-height: var(--font-line-height-m);
+}
+
+nav h2::before {
+    display: none;
+}
+
+nav ul,
+nav ol {
+    margin-bottom: var(--dimension-l);
+}
+
+nav li {
+    list-style: none;
+    list-style-type: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: var(--dimension-s);
+    margin-left: var(--dimension-s);
+}
+
+nav li::before {
+    background-color: var(--color-fg-oninverse-default-tertiary);
+    border-radius: var(--dimension-l);
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: calc(0px - var(--dimension-s));
+    margin-right: var(--dimension-s);
+    text-align: center;
+    height: var(--dimension-s);
+    width: var(--dimension-s);
+}

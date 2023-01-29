@@ -1,0 +1,61 @@
+:root {
+    /* Font */
+    --font-family-default: "Inter", "Helvetica", sans-serif;
+    --font-family-mono: "Roboto Mono", fixed;
+    --font-size-s: 11px;
+    --font-size-m: 14px;
+    --font-size-l: 18px;
+    --font-size-xl: 22px;
+    --font-line-height-s: 16px;
+    --font-line-height-m: 24px;
+    --font-line-height-l: 32px;
+    --font-line-height-xl: 48px;
+    --font-weight-default: 400;
+    --font-weight-strong: 600;
+    /* Dimensions */
+    --dimension-1: 1px;
+    --dimension-2: 2px;
+    --dimension-xs: 4px;
+    --dimension-s: 8px;
+    --dimension-m: 16px;
+    --dimension-l: 24px;
+    --dimension-xl: 32px;
+    --dimension-max: 392px;
+    --dimension-bar: 64px;
+
+    /* MY COLORS */
+
+    /* COLOR - foreground */
+    --color-fg-active-primary: #007be5;
+    --color-fg-default-tertiary: rgba(0, 0, 0, 0.1);
+    --color-fg-inverse-primary: rgba(255, 255, 255, 1);
+    /* inverse */
+    --color-fg-oninverse-default-primary: rgba(255, 255, 255, 0.9);
+    --color-fg-oninverse-default-secondary: rgba(255, 255, 255, 0.5);
+    --color-fg-oninverse-default-tertiary: rgba(255, 255, 255, 0.1);
+    --color-fg-oninverse-active-primary: #7cc4f8;
+    --color-fg-oninverse-accent-primary: #d1a8ff;
+    /* COLOR - background */
+    --color-bg-default: rgba(255, 255, 255, 1);
+    --color-bg-ondefault-active-base: #0d99ff;
+    --color-bg-inverse: #2c2c2c;
+    /* inverse */
+    --color-fg-oninverse-base-neutral: rgba(255, 255, 255, 1);
+
+    /* FIGMA COLORS */
+
+    /* Color - background */
+    --figma-color-bg: rgba(255, 255, 255, 1);
+    --figma-color-bg-secondary: #f5f5f5;
+    --figma-color-bg-tertiary: #e6e6e6;
+    --figma-color-bg-brand-tertiary: #e5f4ff;
+    --figma-color-bg-inverse: #2c2c2c;
+    --color-bg-mid: #cccccc;
+    /* Color - border */
+    --figma-color-border: #e6e6e6;
+    --figma-color-border-strong: #2c2c2c;
+    --color-border-mid: #dddddd;
+    /* Color - text */
+    --figma-color-text: rgba(0, 0, 0, 0.9);
+    --figma-color-text-oninverse: rgba(255, 255, 255, 0.9);
+}

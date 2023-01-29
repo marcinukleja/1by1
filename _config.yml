@@ -1,7 +1,26 @@
 collections:
+  posts:
+    output: false
+  lessons:
+    output: true
   chapter-01:
     output: true
   chapter-02:
     output: true
   chapter-03:
     output: true
+  chapter-04:
+    output: true
+  chapter-05:
+    output: true
+  chapter-06:
+    output: true
+  chapter-07:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
