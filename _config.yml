@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 baseurl: "1by1"
+=======
+# baseurl: "1by1"
+>>>>>>> f63cf32 (initial commit)
 # url: "https://marcinukleja.com"
 
 collections:
