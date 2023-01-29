@@ -1,4 +1,5 @@
 baseurl: "1by1"
+# url: "https://marcinukleja.com"
 
 collections:
   posts:
