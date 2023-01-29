@@ -1,4 +1,4 @@
-baseurl: "1by1"
+# baseurl: "1by1"
 
 collections:
   posts:
