@@ -1,8 +1,7 @@
 ---
 layout: start
+title: "Figma Essentials"
 ---
-
-# Figma Essentials
 
 Welcome to the Figma Essentials guide!
 
