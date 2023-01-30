@@ -177,3 +177,17 @@ strong code {
   font-weight: var(--font-weight-strong);
   border: none;
 }
+
+/* CONTROLS */
+
+a.button {
+  padding: var(--dimension-s) var(--dimension-m);
+  color: var(--color-fg-inverse-primary);
+  border-radius: var(--dimension-s);
+  background-color: var(--color-bg-ondefault-active-base);
+}
+
+a.button-next::after {
+  content: "→";
+  margin-left: var(--dimension-s);
+}

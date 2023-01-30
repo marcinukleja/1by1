@@ -1,4 +1,9 @@
 <footer>
-  <a id="prevLessonButton" href="{{ page.previous.url | relative_url }}">Previous</a>
-  <a id="nextLessonButton" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+  {% if page.previous %}
+  <a id="prevLessonButton" class="button" href="{{ page.previous.url | relative_url }}">Previous</a>
+  {% endif %} {% if page.next %}
+  <a id="nextLessonButton" class="button button-next" href="{{ page.next.url | relative_url }}"
+    >{{ page.next.title }}</a
+  >
+  {% endif %}
 </footer>
