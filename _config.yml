@@ -1,5 +1,5 @@
-baseurl: "/1by1"
-url: http://marcinukleja.github.io
+# baseurl: "/1by1"
+# url: http://marcinukleja.github.io
 
 collections:
   posts:

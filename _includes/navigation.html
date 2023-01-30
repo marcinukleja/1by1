@@ -25,9 +25,9 @@
       {% assign lessons = currentChapter.docs | shift %}
       {% for lesson in lessons %}
         {% if isLessonDone %}
-          <a href="{{ lesson.url }}" class="done"></a>
+          <a href="{{ lesson.url | relative_url }}" class="done"></a>
         {% else %}
-          <a href="{{ lesson.url }}" class="to-do"></a>
+          <a href="{{ lesson.url | relative_url  }}" class="to-do"></a>
         {% endif %}
         {% if lesson.url == page.url %}
           {% assign isLessonDone = false %}
@@ -45,13 +45,13 @@
 
     {% for chapter in chapters %}
       <h2>
-        <a href="{{ chapter.docs[0].url }}" class="done"> {{ chapter.docs[0].title }}</a>
+        <a href="{{ chapter.docs[0].url  | relative_url }}" class="done"> {{ chapter.docs[0].title }}</a>
       </h2>
       <ul>
         {% assign lessons = chapter.docs | shift %}
         {% for lesson in lessons %}
           <li>
-            <a href="{{ lesson.url }}">{{ lesson.title }}</a>
+            <a href="{{ lesson.url | relative_url  }}">{{ lesson.title }}</a>
           </li>
         {% endfor %}
       </ul>
