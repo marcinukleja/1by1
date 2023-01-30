@@ -1,7 +1,9 @@
 nav {
     background-color: var(--figma-color-bg-inverse);
-    position: sticky;
-    top: 0
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: var(--dimension-max);
 }
 
 
@@ -16,7 +18,9 @@ nav * {
 nav #bar {
     background-color: var(--figma-color-bg-inverse);
     padding: var(--dimension-s) var(--dimension-m);
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    max-width: var(--dimension-max);
     top: 0;
     height: var(--dimension-bar);
     border-bottom: var(--dimension-1) solid transparent;
@@ -87,6 +91,7 @@ nav.expanded #menuButton::before {
 nav #list {
     padding-left: var(--dimension-m);
     padding-right: var(--dimension-m);
+    padding-top: var(--dimension-bar);
     padding-bottom: 0;
     height: 0;
     overflow-y: scroll;

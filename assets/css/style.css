@@ -16,6 +16,7 @@ body * {
   box-sizing: border-box;
   text-decoration: none;
   user-select: none;
+  margin: 0;
 }
 
 body {
@@ -25,16 +26,19 @@ body {
   width: 100%;
   max-width: var(--dimension-max);
   counter-reset: task;
+  /* display: flex; */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body * {
   background-color: transparent;
-  margin: 0;
   padding: 0;
 }
 
 main {
-  padding: var(--dimension-m);
+  padding: calc(var(--dimension-m) + var(--dimension-bar)) var(--dimension-m);
+  /* flex: 1; */
 }
 
 /* BLOCKS */

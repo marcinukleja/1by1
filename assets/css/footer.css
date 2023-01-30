@@ -1,5 +1,7 @@
 footer {
-    position: sticky;
+    position: fixed;
+    width: 100%;
+    max-width: var(--dimension-max);
     bottom: 0;
     background-color: var(--color-bg-default);
     height: var(--dimension-bar);
