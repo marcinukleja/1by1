@@ -37,6 +37,10 @@ nav.expanded #bar {
     cursor: pointer;
 }
 
+#chapterTitle *:only-child {
+    margin-left: auto;
+}
+
 #chapterTitle #menuButton {
     appearance: none;
     -webkit-appearance: none;
