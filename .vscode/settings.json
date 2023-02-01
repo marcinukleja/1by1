@@ -1,8 +1,10 @@
 {
-    "markdown.styles": [
-        "_site/assets/css/style.css",
-        "_site/assets/css/variables.css",
-        "_utils/markdown.css"
-    ],
-    "oneDarkPro.markdownStyle": false
+  "markdown.styles": [
+    "_site/assets/css/style.css",
+    "_site/assets/css/variables.css",
+    "_utils/markdown.css"
+  ],
+  "oneDarkPro.markdownStyle": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
 }

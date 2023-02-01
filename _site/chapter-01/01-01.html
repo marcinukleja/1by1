@@ -1,17 +1,19 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Figma interface</title>
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navigation.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <script src="/assets/js/script.js"></script>
-  </head>
 
-  <body>
-    <nav id="navigation">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figma interface</title>
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navigation.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+  <nav id="navigation">
   <!-- BAR -->
 
   <div id="bar">
@@ -86,7 +88,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://localhost:4000">Home</a></h2>
+    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
 
     
 
@@ -315,40 +317,47 @@
 </nav>
 
 
-    <main>
-      <h1>Figma interface</h1>
-      <p>In this lesson, we will take a tour of the Figma’s interface and learn about its key areas. It’s essential to know where-is-what, since I will be referring to these areas throughout this guide.</p>
+  <main>
+    <h1>Figma interface</h1>
+    <p>In this lesson, we will take a tour of the Figma’s interface and learn about its key areas. It’s essential to know where-is-what, since I will be referring to these areas throughout this guide.</p>
 
-<p>By the end of this lesson, you will have a good understanding of the Figma interface and be able to confidently use it to create and edit your designs.</p>
+<p>By the end of this lesson, you will have a good understanding of the Figma interface and be able to find tools and information you need during your design process.</p>
 
 <h2 id="general-overview">General overview</h2>
 
 <ul>
   <li>Figma’s “center stage” is called <strong>Canvas</strong>.</li>
   <li>On the left, you can see the <strong>Layers</strong> panel. This is the place where you will see all your layers’ hierarchy as well as all the <strong>Pages</strong>.</li>
+</ul>
+
+<blockquote>
+  <p>Every object created in Figma is represented as a separate <strong>Layer</strong>. There are different types of layers – we will cover most of them in this guide.</p>
+</blockquote>
+
+<ul>
   <li>On the right, you can see the <strong>Design</strong> panel. You will use it to view and edit properties of various layers.</li>
-  <li>Above the canvas, you can see the <strong>Toolbar</strong> where you can find all the tools.</li>
+  <li>Above the canvas, across entire width, you can see the <strong>Toolbar</strong> where you can find all the tools.</li>
   <li>If you use the desktop app (which I recommend), you can see a <strong>Tab bar</strong>, which is great for working on multiple files.</li>
 </ul>
 
 <blockquote>
-  <p>Throughout this guide, I will mention a lot of <strong>keyboard shortcuts</strong>. Using them will help you increase your productivity.</p>
+  <p>Throughout this guide, I will mention a lot about <strong>keyboard shortcuts</strong>. Using them will help you increase your productivity.</p>
 </blockquote>
 
 <h2 id="canvas">Canvas</h2>
 
 <ul>
-  <li><strong>Canvas</strong> is a huge space where you will insert <strong>frames</strong> (also called artoboards) and <strong>other layers</strong> in your designs.</li>
+  <li><strong>Canvas</strong> is a huge space where you will insert <strong>frames</strong> (also called artboards) and <strong>other layers</strong> in your designs.</li>
   <li>Each <strong>frame</strong> would represent separate <strong>view</strong> of your design, and you can have tens (if not hundreds) of them on the one <strong>Canvas</strong>.</li>
   <li>Later, I will show you how to change the <strong>background color</strong> of the entire canvas so it can fit your designs.</li>
-  <li>Navigating the <strong>Canvas</strong> might be hard at the begining, but you will get used to it with time. I will show it to you in the next lesson.</li>
+  <li>Navigating the <strong>Canvas</strong> might be hard at the beginning, but you will get used to it with time. I will show it to you in the next lesson.</li>
 </ul>
 
 <h2 id="left-side-bar">Left side bar</h2>
 
 <ul>
   <li>Default view for the left sidebar is <strong>Layers</strong> view, which will list all the layers on the canvas.</li>
-  <li>Actually, <strong>Layers</strong> is the first tab on this sidebar. Another one is an <strong>Assets</strong> tab. You don’t need to switch to it right now.</li>
+  <li>Actually, <strong>Layers</strong> is the first tab on this sidebar. Another one is an <strong>Assets</strong> tab (visible at the top). You don’t need to switch to it right now.</li>
   <li>In the top-right corner of <strong>Layers</strong> panel, you can see <strong>Pages</strong> picker. <strong>Pages</strong> are used for organizing your entire file. Each <strong>Page</strong> has its own <strong>Canvas</strong>. We won’t need more of them in this guide.</li>
 </ul>
 
@@ -356,7 +365,7 @@
 
 <ul>
   <li>In the <strong>Design</strong> panel, you will find a lot of properties – depending on the selected layer. For now, you can see only the properties of the <strong>Canvas</strong> background.</li>
-  <li>Apart from <strong>Design</strong> tab, right side bar has two other tabs: <strong>Prototype</strong> and <strong>Inspect</strong>. We will take a look at them later in this guide.</li>
+  <li>Apart from <strong>Design</strong> tab, right sidebar has two other tabs: <strong>Prototype</strong> and <strong>Inspect</strong>. We will take a look at them later in this guide.</li>
   <li>In the bottom-right corner of the entire view, you can see <strong>question mark icon</strong>. The most important feature there is <strong>Keyboard shortcuts</strong> – I encourage you to use it at the beginning of your Figma journey.</li>
 </ul>
 
@@ -364,7 +373,7 @@
 
 <ul>
   <li>Tool bar is divided into three parts: <strong>left</strong>, <strong>middle</strong>, and <strong>right</strong>.</li>
-  <li>On the <strong>left side</strong> you can find <strong>Figma menu</strong> and all crucial <strong>tools</strong>.</li>
+  <li>On the <strong>left side</strong> you can find <strong>Figma menu</strong> and all essential <strong>tools</strong>.</li>
   <li><strong>Middle part</strong> changes according to the selection. With no layers selected, you can see file name and location there. After selecting some layers (wait till next lesson) you will see more context tools in this place.</li>
   <li>On the <strong>right side</strong> of the Toolbar, you can find avatars of all people currently in the file, <strong>Share</strong> button, <strong>Prototype</strong> button, and <strong>View options</strong> picker. We will go through all of it in this guide later.</li>
 </ul>
@@ -377,16 +386,16 @@
 
 <ul>
   <li>Tab bar is essentially for tabs representing each opened file in Figma.</li>
-  <li>On the very left of the Tab bar, you can see <strong>home icon</strong>. If you don’t have the app, its equivalent is <strong>Back to files</strong> from the <strong>Figma menu</strong>.</li>
+  <li>On the very left of the Tab bar, you can see <strong>home icon</strong>. If you don’t have the app, its equivalent is <strong>Back to files</strong> in the <strong>Figma menu</strong>.</li>
 </ul>
 
 <hr />
 
 <p>An that’s all about main aspects of Figma’s interface. Now, we can jump to navigation and actual creation!</p>
 
-    </main>
+  </main>
 
-    <footer>
+  <footer>
   
   <a id="prevLessonButton" class="button" href="/chapter-01/01-00.html">Previous</a>
    
@@ -396,5 +405,6 @@
   
 </footer>
 
-  </body>
+</body>
+
 </html>

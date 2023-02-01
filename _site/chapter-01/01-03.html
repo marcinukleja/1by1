@@ -1,17 +1,19 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Header</title>
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navigation.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <script src="/assets/js/script.js"></script>
-  </head>
 
-  <body>
-    <nav id="navigation">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navigation.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <script src="/assets/js/script.js"></script>
+</head>
+
+<body>
+  <nav id="navigation">
   <!-- BAR -->
 
   <div id="bar">
@@ -86,7 +88,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://localhost:4000">Home</a></h2>
+    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
 
     
 
@@ -315,38 +317,56 @@
 </nav>
 
 
-    <main>
-      <h1>Header</h1>
-      <p>In this lesson, you’ll create a Header for the starting view of your portfolio website.</p>
+  <main>
+    <h1>Header</h1>
+    <p>In this lesson, you’ll create a Header for the starting view of your portfolio website.</p>
 
-<p>By the end of this lesson, you’ll know how to create key objects, edit them, and use supporting tools.</p>
-
-<h2 id="create-views-frame">Create view’s frame</h2>
-
-<ol>
-  <li>Activate <strong>Frame</strong> tool (<em><strong>F</strong></em>).</li>
-  <li>On the <strong>Canvas</strong>, <em>click</em> anywhere to create a frame. By default it should be <code class="language-plaintext highlighter-rouge">100×100</code>.</li>
-  <li>In the <strong>Design panel</strong> (on the right), change frame’s dimensions by setting width (<strong>W</strong>) to <code class="language-plaintext highlighter-rouge">360</code> and height (<strong>H</strong>) to <code class="language-plaintext highlighter-rouge">640</code>.</li>
-</ol>
-
-<blockquote>
-  <p>Frames can be placed directly on the <strong>Canvas</strong> or in the other frames. Only those on the <strong>Canvas</strong> have visible name.</p>
-</blockquote>
+<p>By the end of this lesson, you’ll know how to create basic objects, edit them, and use supporting tools.</p>
 
 <h2 id="check-nudge-setting">Check nudge setting</h2>
+<p>It’s good to start with just a simple setup, so your entire design process is smooth and convenient. Let’s start with setting so-called nudge amount, which allows you to change position and dimensions of objects more easily. It impacts default grid as well.</p>
 
 <ol>
   <li>Open <strong>Figma menu</strong> (top-left corner). Go to <strong>Preferences</strong>, and then to <strong>Nudge amount</strong>.</li>
-  <li>Set small nudge to <code class="language-plaintext highlighter-rouge">1</code>, and big nudge to <code class="language-plaintext highlighter-rouge">8</code>.</li>
+  <li>Set small nudge to <code>1</code>, and big nudge to <code>8</code>.</li>
 </ol>
-
-<p>This setting allows you to change position and dimensions of objects more easily. It impacts default grid as well.</p>
 
 <blockquote>
   <p>Value of the big nudge usually equals to the smallest unit you use for aligning all elements (except for detailed ones like icons or texts). Value of 8 pixels is very convenient and common.</p>
 </blockquote>
 
+<h2 id="selecting-and-deselecting-layers">Selecting and deselecting layers</h2>
+
+<p>You can select layers in many different ways and sometimes it depends on the layer type or layer structure.</p>
+
+<ul>
+  <li>You can select many top-level layers by <em>clicking</em> them on the <strong>Canvas</strong>.</li>
+  <li>Some layers will be nested inside others (we will create some later) – they require multiple clicks for being selected.</li>
+  <li>The easiest way for selecting top-level frames (those on the <strong>Canvas</strong>) is by <em>clicking</em> on their name.</li>
+  <li>In many cases you might find selecting layers from the <strong>Layers</strong> panel most convenient.</li>
+  <li>To deselect layer just click anywhere on the <strong>Canvas</strong> background or just press <strong><code>Esc</code></strong> key.</li>
+</ul>
+
+<h2 id="check-layer-properties">Check layer properties</h2>
+
+<ol>
+  <li>Select newly created frame (it’s probably <code>Android Large - 1</code>).</li>
+  <li>Take a look at the <strong>Design</strong> panel from top to bottom – don’t change anything yet.</li>
+</ol>
+
+<p>Every layer in Figma has it’s own properties that you can easily manipulate in the <strong>Design</strong> panel.</p>
+
+<!-- - Top section is dedicated for controlling layer's geometry like position and dimensions.
+- Below you have **Auto layout** section – it's empty for now, but we will cover it later in this guide.
+- Below you can see empty **Layout grid** section – we will use it in this lesson.
+- Then there's a **Layer** section responsible for visibility of the selected layer.
+- **Fill** and **Stroke** sections control color and style of these two parameters.
+- **Effects** section allows to add effects like shadow or blur to the layers.
+- **Export** options are useful for creating specific assets (files) from Figma's layers. -->
+
 <h2 id="set-layout-grid">Set layout grid</h2>
+
+<p>Grid is a very helpful tool for placing interface elements and create neat layouts.</p>
 
 <ol>
   <li>Select newly created frame.</li>
@@ -362,19 +382,19 @@
 <ol>
   <li>Zoom in, so you can see top of the frame clearly.</li>
   <li>Activate Rectangle tool (<strong><em>R</em></strong>).</li>
-  <li><strong><em>Press &amp; drag</em></strong> from the top-left corner and draw a <code class="language-plaintext highlighter-rouge">360×24</code> rectangle.
+  <li><strong><em>Press &amp; drag</em></strong> from the top-left corner and draw a <code>360×24</code> rectangle.
     <blockquote>
       <p><strong>⚠︎ Be careful</strong>. If you start drawing rectangle outside of the frame, it won’t be in it. You can make sure it’s inside the frame by looking at the <strong>Layers</strong> panel.</p>
     </blockquote>
   </li>
-  <li>In the <strong>Design</strong> panel, double-check rectangle’s position and dimensions. If there is something wrong, just correct it. It should be: <strong>X</strong> <code class="language-plaintext highlighter-rouge">0</code>, <strong>Y</strong> <code class="language-plaintext highlighter-rouge">0</code>, <strong>W</strong> <code class="language-plaintext highlighter-rouge">360</code>, <strong>H</strong> <code class="language-plaintext highlighter-rouge">24</code>.</li>
+  <li>In the <strong>Design</strong> panel, double-check rectangle’s position and dimensions. If there is something wrong, just correct it. It should be: <strong>X</strong> <code>0</code>, <strong>Y</strong> <code>0</code>, <strong>W</strong> <code>360</code>, <strong>H</strong> <code>24</code>.</li>
   <li>Status bar is usually a system element and you cannot change its dimensions. For the purpose of this tutorial, let’s keep it 24 pixels high – it’s a standard height of Android’s status bar.</li>
 </ol>
 
 <h2 id="color-status-bar">Color status bar</h2>
 
 <ol>
-  <li>Select newly created rectangle. It should be selected automatically once you drew it; if it’s not, you can select it on the <strong>Canvas</strong> bysimply <strong><em>clicking</em></strong> on it.</li>
+  <li>Select newly created rectangle. It should be selected automatically once you drew it; if it’s not, you can select it on the <strong>Canvas</strong> by simply <strong><em>clicking</em></strong> on it.</li>
   <li>In the <strong>Design</strong> panel, in the <strong>Fill</strong> section, <strong><em>click</em></strong> on the small square that represents current fill (it’s probably gray).</li>
   <li>Experiment with color picker using sliders. Current color is represented with hexadecimal value (6 characters) that you can find in the <strong>Design</strong> panel’s <strong>Fill</strong> section.</li>
   <li>Finally, set hexadecimal color value to <em>FFC700</em> and <em>100%</em> by typing it in the <strong>Fill</strong> section. Confirm by pressing <strong><em>↩︎ Enter</em></strong>. Status bar should become yellow.It’s not common to change status bar’s background, but let’s do it to give a bit of color accent to the view.Color theory is a huge topic in the visual design, so it’s highly recommended to familiarize with it before jumping into interface design field.For the purpose of this tutorial, you will use colors that play well with each other; it’s Figma’s UI palette, by the way.</li>
@@ -388,9 +408,9 @@
   <li>Name this color <em>Accent</em> and <strong><em>click</em></strong> <strong>Create style</strong> button. Fill section should change to the yellow circle and the name of newly created style.By doing that, you named this color for the future use. Thank’s to that, you don’t need to remember it’s hex value and you will have better control over managing it.Color naming is not an easy topic and there are many approaches to it. Usually it’s better to name colors by the role they play in the interface (in this case it’s a color that makes an accent), rather than naming color itself (like yellow).</li>
 </ol>
 
-    </main>
+  </main>
 
-    <footer>
+  <footer>
   
   <a id="prevLessonButton" class="button" href="/chapter-01/01-02.html">Previous</a>
    
@@ -400,5 +420,6 @@
   
 </footer>
 
-  </body>
+</body>
+
 </html>
