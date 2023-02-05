@@ -167,8 +167,7 @@ code {
   padding: 0 var(--dimension-xs);
 }
 
-code strong,
-strong code {
+kbd>kbd {
   display: inline-block;
   min-width: var(--font-line-height-m);
   text-align: center;
@@ -179,6 +178,12 @@ strong code {
   font-style: normal;
   margin: 0 var(--dimension-2);
   font-weight: var(--font-weight-strong);
+  border: none;
+}
+
+kbd {
+  white-space: nowrap;
+  appearance: none;
   border: none;
 }
 

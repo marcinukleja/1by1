@@ -1,10 +1,14 @@
 {
-  "markdown.styles": [
-    "_site/assets/css/style.css",
-    "_site/assets/css/variables.css",
-    "_utils/markdown.css"
-  ],
+  "markdown.styles": ["_site/assets/css/style.css", "_site/assets/css/variables.css", "_utils/markdown.css"],
   "oneDarkPro.markdownStyle": false,
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+    // "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }

@@ -1,0 +1,15 @@
+{%- assign command = include.command -%}
+{%- case command -%}
+  {%- when "Frame" -%}
+  {%- assign keys = "⇧,F" -%}
+  {%- when "Layout grids" -%}
+  {%- assign keys = "⇧,G" -%}
+  {%- when "Select none" -%}
+  {%- assign keys = "Esc" -%}
+{%- endcase -%}
+{%- assign keys = keys | split: "," -%}
+<kbd>
+  {%- for key in keys -%}
+    <kbd>{{- key -}}</kbd>
+  {%- endfor -%}
+</kbd>
