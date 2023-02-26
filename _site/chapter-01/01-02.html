@@ -17,7 +17,7 @@
   </script>
 </head>
 
-<body>
+<body class="mac-platform">
   <nav id="navigation">
   <!-- BAR -->
 
@@ -93,7 +93,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
+    <h2><a href="http://localhost:4000">Home</a></h2>
 
     
 
@@ -113,19 +113,19 @@
           </li>
         
           <li>
-            <a href="/chapter-01/01-03.html">Header container</a>
+            <a href="/chapter-01/01-03.html">Header background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-04.html">Avatar + Name</a>
+            <a href="/chapter-01/01-04.html">Fills</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-05.html">Row content </a>
+            <a href="/chapter-01/01-05.html">Avatar background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-06.html">Row instances</a>
+            <a href="/chapter-01/01-06.html">Greetings</a>
           </li>
         
           <li>
@@ -324,9 +324,9 @@
 
   <main>
     <h1>Navigation</h1>
-    <p>In this lesson, I’m going to show you how to navigate on the <strong>Canvas</strong>. We will create first <strong>Frame</strong> and learn different techniques to move around your designs. At first, it might feel a bit overwhelming, but soon you will perfect it.</p>
+    <p>In this lesson, you will create first <strong>Frame</strong> and learn different techniques to move around your designs. At first, it might feel a bit overwhelming, but soon you will perfect it.</p>
 
-<p>By the end of this lesson, you will be able to freely <em>zoom</em> and <em>pan</em> the <strong>Canvas</strong>, and you will be in the control of what you see.</p>
+<p>By the end of this lesson, you will be able to freely zoom and pan the <strong>Canvas</strong>, and you will be in the control of what you see.</p>
 
 <h2 id="create-a-frame">Create a Frame</h2>
 
@@ -335,7 +335,7 @@
 <ol>
   <li>From the <strong>Tool bar</strong> in the top-left corner, choose <strong>Frame</strong> tool (<strong>#</strong>-like icon).
     <blockquote>
-      <p>I highly encourage you to start using keyboard shortcuts from the very beginning. In this case, just hit <strong><code>F</code></strong> on the keyboard.</p>
+      <p>I highly encourage you to start using keyboard shortcuts from the very beginning. In this case, just hit <kbd class="mac-key"><kbd>F</kbd></kbd><kbd class="win-key"><kbd>F</kbd></kbd> on the keyboard.</p>
     </blockquote>
   </li>
   <li>From the right panel (<strong>Design</strong>), under <code>Phone</code> section, choose <code>Android Large</code> frame. White rectangular frame should appear in the center of the <strong>Canvas</strong>.
@@ -348,21 +348,21 @@
 
 <h2 id="zoom-in--out">Zoom in &amp; out</h2>
 
-<p>There are multiple ways to <em>zoom</em> in Figma and they depend on the device you use (e.g. mouse, trackpad) and your individual preference.</p>
+<p>There are multiple ways to zoom in Figma and they depend on the device you use (e.g. mouse, trackpad) and your individual preference.</p>
 
 <ul>
-  <li>If you’re using <strong>mouse</strong>, just hold down <strong><code>⌘</code></strong> and <em>scroll up</em> or <em>scroll down</em>.</li>
-  <li>If you’re using <strong>trackpad</strong>, just <em>pinch-in</em> or <em>pinch-out</em>.</li>
+  <li>If you’re using <strong>mouse</strong>, just hold down <kbd class="mac-key"><kbd>⌘</kbd></kbd><kbd class="win-key"><kbd>Ctrl</kbd></kbd> and scroll up or scroll down.</li>
+  <li>If you’re using <strong>trackpad</strong>, just pinch-in or pinch-out.</li>
 </ul>
 
 <h2 id="pan">Pan</h2>
 
-<p>As with <em>zooming</em>, <em>panning</em> the <strong>Canvas</strong> can be done in multiple ways.</p>
+<p>As with zooming, panning the <strong>Canvas</strong> can be done in multiple ways.</p>
 
 <ul>
-  <li>If you’re using <strong>mouse</strong>, just hold <strong><code>Space</code></strong> and then <strong><code>drag</code></strong>.</li>
-  <li>If you’re using <strong>trackpad</strong>, just <strong><code>pan</code></strong> (move) using two fingers (without <em>clicking</em>).</li>
-  <li>If you’re using <strong>Magic Mouse</strong>, just <strong><code>pan</code></strong> using one finger (without <em>clicking</em>).</li>
+  <li>If you’re using <strong>mouse</strong>, just hold <kbd class="mac-key"><kbd>Space</kbd></kbd><kbd class="win-key"><kbd>Space</kbd></kbd> and then click-and-drag.</li>
+  <li>If you’re using <strong>trackpad</strong>, just pan (move) using two fingers (without clicking).</li>
+  <li>If you’re using <strong>Magic Mouse</strong>, just pan using one finger (without clicking).</li>
 </ul>
 
 <h2 id="experiment-with-zooming-and-panning">Experiment with zooming and panning</h2>
@@ -373,13 +373,12 @@
   <p>None of these actions change the actual size of the newly created <strong>Frame</strong>. It just controls how it looks in the so-called viewport (visible part of the <strong>Canvas</strong>).</p>
 </blockquote>
 
-<!-- prettier-ignore -->
 <ol>
   <li><strong>Zoom out</strong>, so the <strong>Frame</strong> in the viewport is small as mouse cursor.</li>
   <li><strong>Zoom in</strong>, so the <strong>Frame</strong> fits the viewport entirely.</li>
   <li><strong>Zoom out</strong> a bit, so <strong>Frame</strong> has some space around.</li>
   <li><strong>Pan</strong> around, so the <strong>Frame</strong> is visible in any corner of the viewport.</li>
-  <li>At the end, press <strong><code>⇧</code></strong><strong><code>1</code></strong> to <strong>zoom to fit</strong> all visible layers (we have one so far) in the viewport.</li>
+  <li>At the end, press <kbd class="mac-key"><kbd>⇧</kbd><kbd>1</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd><kbd>1</kbd></kbd> to <strong>zoom to fit</strong> all visible layers (we have one so far) in the viewport.</li>
 </ol>
 
 <hr />
@@ -393,7 +392,7 @@
   <a id="prevLessonButton" class="button" href="/chapter-01/01-01.html">Previous</a>
    
   <a id="nextLessonButton" class="button button-next" href="/chapter-01/01-03.html"
-    >Header container</a
+    >Header background</a
   >
   
 </footer>

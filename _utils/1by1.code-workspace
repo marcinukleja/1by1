@@ -5,6 +5,7 @@
     }
   ],
   "settings": {
-    "oneDarkPro.markdownStyle": false
+    "oneDarkPro.markdownStyle": false,
+    "liquid.format.enable": false
   }
 }

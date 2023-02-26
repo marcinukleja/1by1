@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header container</title>
+  <title>Header background</title>
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/navigation.css">
@@ -17,7 +17,7 @@
   </script>
 </head>
 
-<body>
+<body class="mac-platform">
   <nav id="navigation">
   <!-- BAR -->
 
@@ -93,7 +93,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
+    <h2><a href="http://localhost:4000">Home</a></h2>
 
     
 
@@ -113,19 +113,19 @@
           </li>
         
           <li>
-            <a href="/chapter-01/01-03.html">Header container</a>
+            <a href="/chapter-01/01-03.html">Header background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-04.html">Avatar + Name</a>
+            <a href="/chapter-01/01-04.html">Fills</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-05.html">Row content </a>
+            <a href="/chapter-01/01-05.html">Avatar background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-06.html">Row instances</a>
+            <a href="/chapter-01/01-06.html">Greetings</a>
           </li>
         
           <li>
@@ -323,110 +323,152 @@
 
 
   <main>
-    <h1>Header container</h1>
-    <p>In this lesson, you’ll create a Header <kbd><kbd>⇧</kbd><kbd>F</kbd></kbd>
- for the starting view of your portfolio website.</p>
+    <h1>Header background</h1>
+    <p>In this lesson, you’ll set up grid and create a Header for the starting view of your portfolio website.</p>
 
-<p>By the end of this lesson, you’ll know how to create basic objects, edit them, and use supporting tools.</p>
+<h2 id="rename-frame">Rename Frame</h2>
+
+<p>Let’s keep your <em>workshop</em> clean and tidy. Naming Frames and other layers is a good practice, that is crucial for effective work.</p>
+
+<ol>
+  <li>On the <strong>Canvas</strong>, double-click on the newly created <strong>Frame</strong>’s name.</li>
+  <li>Rename it to <code>Start</code>.</li>
+  <li>Press <kbd class="mac-key"><kbd>⏎ Enter</kbd></kbd><kbd class="win-key"><kbd>Enter</kbd></kbd> to confirm the change.</li>
+</ol>
+
+<blockquote>
+  <p>You can rename any layer from the <strong>Layers</strong> panel by double-clicking on its name or with <kbd class="mac-key"><kbd>⌘</kbd><kbd>R</kbd></kbd><kbd class="win-key"><kbd>Ctrl</kbd><kbd>R</kbd></kbd> while the layer is selected.</p>
+</blockquote>
 
 <h2 id="check-nudge-setting">Check nudge setting</h2>
 
 <p>It’s good to start with just a simple setup, so your entire design process is smooth and convenient. Let’s start with setting so-called nudge amount, which allows you to change position and dimensions of objects more easily. It impacts default grid as well.</p>
 
 <ol>
-  <li>Open <strong>Figma menu</strong> (top-left corner). Go to <strong>Preferences</strong>, and then to <strong>Nudge amount</strong> (at the bottom).</li>
+  <li>Open Figma’s <strong>Main menu</strong> (top-left corner). Go to <strong>Preferences</strong>, and then to <strong>Nudge amount</strong> (at the bottom).</li>
   <li>Set small nudge to <code>1</code>, and big nudge to <code>8</code>.</li>
-  <li>Close window by clicking <strong>x-icon</strong> or clicking outside of the window.</li>
+  <li>Close window by clicking <strong>x-icon</strong>.</li>
 </ol>
 
 <blockquote>
   <p>Value of the big nudge usually equals to the smallest unit you use for aligning all elements (except for detailed ones like icons or texts). Value of 8 pixels is very convenient and common.</p>
 </blockquote>
 
-<h2 id="selecting-and-deselecting-layers">Selecting and deselecting layers</h2>
-
-<p>You can select layers in many different ways and sometimes it depends on the layer type or layer structure.</p>
-
-<ul>
-  <li>You can select many top-level layers by <em>clicking</em> them on the <strong>Canvas</strong>.</li>
-  <li>Some layers will be nested inside others (we will create some later) – they require multiple clicks for being selected.</li>
-  <li>The easiest way for selecting top-level frames (those on the <strong>Canvas</strong>) is by <em>clicking</em> on their name.</li>
-  <li>In many cases you might find selecting layers from the <strong>Layers</strong> panel most convenient.</li>
-  <li>To deselect layer just click anywhere on the <strong>Canvas</strong> background or just press <kbd><kbd>Esc</kbd></kbd>
- key.</li>
-</ul>
-
-<h2 id="check-layer-properties">Check layer properties</h2>
+<h2 id="apply-grid-to-frame">Apply grid to Frame</h2>
 
 <ol>
-  <li>Select newly created frame (it’s probably <code>Android Large - 1</code>).</li>
-  <li>Take a look at the <strong>Design</strong> panel from top to bottom – don’t change anything yet.</li>
+  <li>If <code>Start</code> <strong>Frame</strong> isn’t selected, click on its name to select it. Alternatively, you can select it from the <strong>Layers</strong> panel.</li>
+  <li>In the <strong>Design</strong> panel you’ll see a bunch of selected layer’s properties, but for now, look for <strong>Layout grid</strong> section.</li>
+  <li>Click on the <strong>plus icon</strong> on the right, next to <strong>Layout grid</strong> section title.</li>
 </ol>
 
-<p>Every layer in Figma has it’s own properties that you can easily manipulate in the <strong>Design</strong> panel.</p>
-
-<ul>
-  <li>Top section is dedicated for controlling layer’s geometry like position and dimensions.</li>
-  <li>Below you have <strong>Auto layout</strong> section – it’s empty for now, but we will cover it later in this guide.</li>
-  <li>Below you can see empty <strong>Layout grid</strong> section – we will use it in this lesson.</li>
-  <li>Then there’s a <strong>Layer</strong> section responsible for visibility of the selected layer.</li>
-  <li><strong>Fill</strong> and <strong>Stroke</strong> sections control color and style of these two parameters.</li>
-  <li><strong>Effects</strong> section allows to add effects like shadow or blur to the layers.</li>
-  <li><strong>Export</strong> options are useful for creating specific assets (files) from Figma’s layers.</li>
-</ul>
-
-<h2 id="set-layout-grid">Set layout grid</h2>
-
-<p>Grid is a very helpful tool for placing interface elements and create neat layouts.</p>
-
-<ol>
-  <li>Select newly created frame.</li>
-  <li>In the <strong>Design</strong> panel, in the <strong>Layout grid</strong> section, click on the <strong>plus icon</strong>. New 8×8 grid should appear in the frame.</li>
-  <li>In the <strong>Layout grid</strong> section, click on the <strong>plus icon</strong> again to add another grid in the same frame.</li>
-  <li>Still in the <strong>Layout grid</strong> section, next to the newly added row, <strong><em>click</em></strong> on the <strong>9‑squares icon</strong> – there are 2 of them, it doesn’t matter which one.</li>
-  <li>Set size of the grid to <em>32</em>. Since opacity is set to <em>10%</em> you can see how it overlays smaller grid.</li>
-  <li>To toggle grid on and off, use <kbd><kbd>⇧</kbd><kbd>G</kbd></kbd>
-shortcut, however keep grid on for the next step.</li>
-</ol>
+<p>Red grid should appear in the <code>Start</code> <strong>Frame</strong> and new row should appear in <strong>Layout grid</strong> section named <code>Grid 8px</code>.</p>
 
 <blockquote>
-  <p>Grid is a very broad design topic. It helps you work with layouts, create visual rhythm, groups and hierarchy. It’s usually good to start your design work with the grid set up.</p>
+  <p>To toggle grid on and off, use <kbd class="mac-key"><kbd>⇧</kbd><kbd>G</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd><kbd>G</kbd></kbd> shortcut, however keep grid on for the next step.</p>
 </blockquote>
 
-<h2 id="create-header-container">Create header container</h2>
-
-<h2 id="create-avatar-container">Create avatar container</h2>
-
-<h2 id="create-anagram">Create anagram</h2>
+<h2 id="create-header-background">Create header background</h2>
 
 <ol>
-  <li>Zoom in, so you can see top of the frame clearly.</li>
-  <li>Activate Rectangle tool (<strong><em>R</em></strong>).</li>
-  <li><strong><em>Press &amp; drag</em></strong> from the top-left corner and draw a <code>360×24</code> rectangle.
+  <li>Zoom in, so you can see top of the <code>Start</code> <strong>Frame</strong> clearly.</li>
+  <li>Activate <strong>Rectangle</strong> tool (<kbd class="mac-key"><kbd>R</kbd></kbd><kbd class="win-key"><kbd>R</kbd></kbd>).</li>
+  <li>Click &amp; drag within a <strong>Frame</strong> to draw a rectangle – don’t bother about exact dimensions right now.
     <blockquote>
-      <p><strong>⚠︎ Be careful</strong>. If you start drawing rectangle outside of the frame, it won’t be in it. You can make sure it’s inside the frame by looking at the <strong>Layers</strong> panel.</p>
+      <p>Be careful. If you start drawing rectangle outside of the frame, it won’t be in it. You can make sure it’s inside the frame by looking at the <strong>Layers</strong> panel – newly created <code>Rectangle 1</code> layer should be indented in relation to <code>Start</code> <strong>Frame</strong>.</p>
     </blockquote>
   </li>
-  <li>In the <strong>Design</strong> panel, double-check rectangle’s position and dimensions. If there is something wrong, just correct it. It should be: <strong>X</strong> <code>0</code>, <strong>Y</strong> <code>0</code>, <strong>W</strong> <code>360</code>, <strong>H</strong> <code>24</code>.</li>
-  <li>Status bar is usually a system element and you cannot change its dimensions. For the purpose of this tutorial, let’s keep it 24 pixels high – it’s a standard height of Android’s status bar.</li>
+  <li>Now look at the <strong>Design</strong> panel, enter correct values for the position and dimensions of the newly created rectangle. It should be: <strong>X</strong> <code>0</code>, <strong>Y</strong> <code>0</code>, <strong>W</strong> <code>360</code>, <strong>H</strong> <code>96</code>.
+    <blockquote>
+      <p>While the focus is in the text field, you can use <kbd class="mac-key"><kbd>⇥ Tab</kbd></kbd><kbd class="win-key"><kbd>Tab</kbd></kbd> to go to the next field.</p>
+    </blockquote>
+  </li>
 </ol>
 
-<h2 id="color-status-bar">Color status bar</h2>
+<h2 id="selecting-and-deselecting-layers">Selecting and deselecting layers</h2>
+
+<p>Once you created the rectangle, you can experiment with selecting layers. You can select them in many different ways and sometimes it depends on the layer type or layer structure.</p>
+
+<ul>
+  <li>You can select many top-level layers by clicking them on the <strong>Canvas</strong>.</li>
+  <li>Some layers will be nested inside others (we will create some later) – they require multiple clicks for being selected.</li>
+  <li>The easiest way for selecting top-level frames (those on the <strong>Canvas</strong>) is by clicking on their name.</li>
+  <li>In many cases you might find selecting layers from the <strong>Layers</strong> panel most convenient.</li>
+  <li>To deselect layer just click anywhere on the <strong>Canvas</strong> background or just press <kbd class="mac-key"><kbd>⎋ Esc</kbd></kbd><kbd class="win-key"><kbd>Esc</kbd></kbd> key.</li>
+</ul>
+
+<blockquote>
+  <p>While you are working, you might make some mistakes, and the easiest way to correct it is to delete something and start over. To delete a layer just select it and press <kbd class="mac-key"><kbd>⌫</kbd></kbd><kbd class="win-key"><kbd>Delete</kbd></kbd>.</p>
+</blockquote>
+
+<h2 id="rename-rectangle-layer">Rename rectangle layer</h2>
+
+<p>As always, name your layers for better effectiveness.</p>
 
 <ol>
-  <li>Select newly created rectangle. It should be selected automatically once you drew it; if it’s not, you can select it on the <strong>Canvas</strong> by simply <strong><em>clicking</em></strong> on it.</li>
-  <li>In the <strong>Design</strong> panel, in the <strong>Fill</strong> section, <strong><em>click</em></strong> on the small square that represents current fill (it’s probably gray).</li>
-  <li>Experiment with color picker using sliders. Current color is represented with hexadecimal value (6 characters) that you can find in the <strong>Design</strong> panel’s <strong>Fill</strong> section.</li>
-  <li>Finally, set hexadecimal color value to <em>FFC700</em> and <em>100%</em> by typing it in the <strong>Fill</strong> section. Confirm by pressing <strong><em>↩︎ Enter</em></strong>. Status bar should become yellow.It’s not common to change status bar’s background, but let’s do it to give a bit of color accent to the view.Color theory is a huge topic in the visual design, so it’s highly recommended to familiarize with it before jumping into interface design field.For the purpose of this tutorial, you will use colors that play well with each other; it’s Figma’s UI palette, by the way.</li>
+  <li>Make sure you have newly created rectangle selected.</li>
+  <li>Use <kbd class="mac-key"><kbd>⌘</kbd><kbd>R</kbd></kbd><kbd class="win-key"><kbd>Ctrl</kbd><kbd>R</kbd></kbd> or double-click layer’s name in the <strong>Layers</strong> panel.</li>
+  <li>Rename layer to <code>Header background</code>.</li>
 </ol>
 
-<h2 id="add-color-style">Add color style</h2>
+<hr />
 
-<ol>
-  <li>With the rectangle selected, in the <strong>Design</strong> panel, in the <strong>Fill</strong> section, <strong><em>click</em></strong> on <strong>4‑dots icon</strong>. Color Styles panel should appear.</li>
-  <li>In this panel, <strong><em>click</em></strong> on the <strong>plus icon</strong>. Don’t mistake this icon with the plus icon on the section itself – it happens sometimes.</li>
-  <li>Name this color <em>Accent</em> and <strong><em>click</em></strong> <strong>Create style</strong> button. Fill section should change to the yellow circle and the name of newly created style.By doing that, you named this color for the future use. Thank’s to that, you don’t need to remember it’s hex value and you will have better control over managing it.Color naming is not an easy topic and there are many approaches to it. Usually it’s better to name colors by the role they play in the interface (in this case it’s a color that makes an accent), rather than naming color itself (like yellow).</li>
-</ol>
+<p>In this lesson you learned how to set up <strong>nudge amount</strong>, add <strong>grid</strong> to your view, create and modify <strong>rectangle</strong>, as well as familiarized yourself with basics of <strong>selecting</strong> layers.</p>
+
+<!--
+## Check layer properties
+
+1. Take a look at the **Design** panel from top to bottom – don't change anything yet.
+
+Every layer in Figma has it's own properties that you can easily manipulate in the **Design** panel.
+
+- Top section is dedicated for controlling layer's geometry like position and dimensions.
+- Below you have **Auto layout** section – it's empty for now, but we will cover it later in this guide.
+- Below you can see empty **Layout grid** section – we will use it in this lesson.
+- Then there's a **Layer** section responsible for visibility of the selected layer.
+- **Fill** and **Stroke** sections control color and style of these two parameters.
+- **Effects** section allows to add effects like shadow or blur to the layers.
+- **Export** options are useful for creating specific assets (files) from Figma's layers.
+
+## Set layout grid
+
+Grid is a very helpful tool for placing interface elements and create neat layouts.
+
+1. Select newly created frame.
+2. In the **Design** panel, in the **Layout grid** section, click on the **plus icon**. New 8×8 grid should appear in the frame.
+3. In the **Layout grid** section, click on the **plus icon** again to add another grid in the same frame.
+4. Still in the **Layout grid** section, next to the newly added row, **_click_** on the **9‑squares icon** – there are 2 of them, it doesn’t matter which one.
+5. Set size of the grid to *32*. Since opacity is set to *10%* you can see how it overlays smaller grid.
+
+> Grid is a very broad design topic. It helps you work with layouts, create visual rhythm, groups and hierarchy. It’s usually good to start your design work with the grid set up.
+
+## Create header container
+
+## Create avatar container
+
+## Create anagram
+
+1. Zoom in, so you can see top of the frame clearly.
+2. Activate Rectangle tool (**_R_**).
+3. **_Press & drag_** from the top-left corner and draw a `360×24` rectangle.
+   > **⚠︎ Be careful**. If you start drawing rectangle outside of the frame, it won’t be in it. You can make sure it’s inside the frame by looking at the **Layers** panel.
+4. In the **Design** panel, double-check rectangle's position and dimensions. If there is something wrong, just correct it. It should be: **X** `0`, **Y** `0`, **W** `360`, **H** `24`.
+5. Status bar is usually a system element and you cannot change its dimensions. For the purpose of this tutorial, let’s keep it 24 pixels high – it’s a standard height of Android’s status bar.
+
+## Color status bar
+
+1. Select newly created rectangle. It should be selected automatically once you drew it; if it’s not, you can select it on the **Canvas** by simply **_clicking_** on it.
+2. In the **Design** panel, in the **Fill** section, **_click_** on the small square that represents current fill (it’s probably gray).
+3. Experiment with color picker using sliders. Current color is represented with hexadecimal value (6 characters) that you can find in the **Design** panel’s **Fill** section.
+4. Finally, set hexadecimal color value to *FFC700* and *100%* by typing it in the **Fill** section. Confirm by pressing **_↩︎ Enter_**. Status bar should become yellow.It’s not common to change status bar’s background, but let’s do it to give a bit of color accent to the view.Color theory is a huge topic in the visual design, so it’s highly recommended to familiarize with it before jumping into interface design field.For the purpose of this tutorial, you will use colors that play well with each other; it’s Figma’s UI palette, by the way.
+
+## Add color style
+
+1. With the rectangle selected, in the **Design** panel, in the **Fill** section, **_click_** on **4‑dots icon**. Color Styles panel should appear.
+2. In this panel, **_click_** on the **plus icon**. Don’t mistake this icon with the plus icon on the section itself – it happens sometimes.
+3. Name this color *Accent* and **_click_** **Create style** button. Fill section should change to the yellow circle and the name of newly created style.By doing that, you named this color for the future use. Thank’s to that, you don’t need to remember it’s hex value and you will have better control over managing it.Color naming is not an easy topic and there are many approaches to it. Usually it’s better to name colors by the role they play in the interface (in this case it’s a color that makes an accent), rather than naming color itself (like yellow).
+
+-->
 
   </main>
 
@@ -435,7 +477,7 @@ shortcut, however keep grid on for the next step.</li>
   <a id="prevLessonButton" class="button" href="/chapter-01/01-02.html">Previous</a>
    
   <a id="nextLessonButton" class="button button-next" href="/chapter-01/01-04.html"
-    >Avatar + Name</a
+    >Fills</a
   >
   
 </footer>

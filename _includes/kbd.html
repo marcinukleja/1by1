@@ -1,15 +1,8 @@
 {%- assign command = include.command -%}
-{%- case command -%}
-  {%- when "Frame" -%}
-  {%- assign keys = "⇧,F" -%}
-  {%- when "Layout grids" -%}
-  {%- assign keys = "⇧,G" -%}
-  {%- when "Select none" -%}
-  {%- assign keys = "Esc" -%}
-{%- endcase -%}
-{%- assign keys = keys | split: "," -%}
-<kbd>
-  {%- for key in keys -%}
-    <kbd>{{- key -}}</kbd>
-  {%- endfor -%}
-</kbd>
+{%- assign macKeys = site.data.shortcuts[include.command].macKeys -%}
+{%- assign winKeys = site.data.shortcuts[include.command].winKeys -%}
+<kbd class="mac-key">
+{%- for key in macKeys -%}
+<kbd>{{- key -}}</kbd>
+{%- endfor -%}
+</kbd><kbd class="win-key">{%- for key in winKeys -%}<kbd>{{- key -}}</kbd>{%- endfor -%}</kbd>

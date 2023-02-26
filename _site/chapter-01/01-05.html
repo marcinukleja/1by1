@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Row content </title>
+  <title>Avatar background</title>
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/navigation.css">
@@ -17,7 +17,7 @@
   </script>
 </head>
 
-<body>
+<body class="mac-platform">
   <nav id="navigation">
   <!-- BAR -->
 
@@ -93,7 +93,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
+    <h2><a href="http://localhost:4000">Home</a></h2>
 
     
 
@@ -113,19 +113,19 @@
           </li>
         
           <li>
-            <a href="/chapter-01/01-03.html">Header container</a>
+            <a href="/chapter-01/01-03.html">Header background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-04.html">Avatar + Name</a>
+            <a href="/chapter-01/01-04.html">Fills</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-05.html">Row content </a>
+            <a href="/chapter-01/01-05.html">Avatar background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-06.html">Row instances</a>
+            <a href="/chapter-01/01-06.html">Greetings</a>
           </li>
         
           <li>
@@ -323,8 +323,47 @@
 
 
   <main>
-    <h1>Row content </h1>
-    
+    <h1>Avatar background</h1>
+    <p>In this lesson you will create basic circular avatar background with custom color.</p>
+
+<p><img width="100%" src="/assets/images/01-05.png" /></p>
+
+<h2 id="create-circle">Create circle</h2>
+
+<ol>
+  <li>Zoom in the <code>Start</code> frame so you can clearly see top-left corner of it. To do it pinch-out on your <strong>trackpad</strong> or hold <kbd class="mac-key"><kbd>⌘</kbd></kbd><kbd class="win-key"><kbd>Ctrl</kbd></kbd> and use <strong>mouse scroll</strong> (wheel).</li>
+  <li>Toggle <strong>Grid</strong> on (<kbd class="mac-key"><kbd>⇧</kbd><kbd>G</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd><kbd>G</kbd></kbd>).</li>
+  <li>Activate <strong>Ellipse</strong> tool (<kbd class="mac-key"><kbd>O</kbd></kbd><kbd class="win-key"><kbd>O</kbd></kbd>).</li>
+  <li>Click-and-drag within a <strong>Frame</strong> while holding <kbd class="mac-key"><kbd>⇧</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd></kbd> to draw a perfect circle. Don’t bother about exact dimensions right now.
+    <blockquote>
+      <p>You can start drawing shapes without <kbd class="mac-key"><kbd>⇧</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd></kbd> pressed – just press it before finishing the mouse drag.</p>
+    </blockquote>
+  </li>
+  <li>In the <strong>Design</strong> panel change its position and dimensions. It should be: <strong>X</strong> <code>16</code>, <strong>Y</strong> <code>24</code>, <strong>W</strong> <code>48</code>, <strong>H</strong> <code>48</code>.</li>
+</ol>
+
+<h2 id="change-circles-fill">Change circle’s fill</h2>
+
+<ol>
+  <li>Make sure newly created circle is selected.</li>
+  <li>In the <strong>Design</strong> panel, in the <strong>Fill</strong> section, click hexadecimal value (it might be <code>D9D9D9</code> for now) and change it to <code>9747FF</code>. Press <kbd class="mac-key"><kbd>⏎ Enter</kbd></kbd><kbd class="win-key"><kbd>Enter</kbd></kbd> to confirm. You should get purple color.
+    <blockquote>
+      <p>Choosing right color for your UI is not a simple task. For the purpose of this guide, let’s use colors I chose earlier – you would be able to change them later.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<h2 id="rename-circle-layer">Rename circle layer</h2>
+
+<ol>
+  <li>Make sure you have newly created circle selected.</li>
+  <li>Use <kbd class="mac-key"><kbd>⌘</kbd><kbd>R</kbd></kbd><kbd class="win-key"><kbd>Ctrl</kbd><kbd>R</kbd></kbd> or double-click layer’s name in the <strong>Layers</strong> panel.</li>
+  <li>Rename layer to <code>Avatar background</code>.</li>
+</ol>
+
+<hr />
+
+<p>In this lesson, you learned how to draw a <strong>circle</strong> shape and quickly change its fill.</p>
 
   </main>
 
@@ -333,7 +372,7 @@
   <a id="prevLessonButton" class="button" href="/chapter-01/01-04.html">Previous</a>
    
   <a id="nextLessonButton" class="button button-next" href="/chapter-01/01-06.html"
-    >Row instances</a
+    >Greetings</a
   >
   
 </footer>

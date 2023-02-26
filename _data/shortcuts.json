@@ -1,0 +1,61 @@
+{
+  "space": {
+    "macKeys": ["Space"],
+    "winKeys": ["Space"]
+  },
+  "enter": {
+    "macKeys": ["⏎ Enter"],
+    "winKeys": ["Enter"]
+  },
+  "tab": {
+    "macKeys": ["⇥ Tab"],
+    "winKeys": ["Tab"]
+  },
+  "escape": {
+    "macKeys": ["⎋ Esc"],
+    "winKeys": ["Esc"]
+  },
+  "delete": {
+    "macKeys": ["⌫"],
+    "winKeys": ["Delete"]
+  },
+  "shift": {
+    "macKeys": ["⇧"],
+    "winKeys": ["Shift"]
+  },
+  "command": {
+    "macKeys": ["⌘"],
+    "winKeys": ["Ctrl"]
+  },
+
+  "frame": {
+    "macKeys": ["F"],
+    "winKeys": ["F"]
+  },
+  "rectangle": {
+    "macKeys": ["R"],
+    "winKeys": ["R"]
+  },
+  "ellipse": {
+    "macKeys": ["O"],
+    "winKeys": ["O"]
+  },
+
+  "zoomToFit": {
+    "macKeys": ["⇧", "1"],
+    "winKeys": ["Shift", "1"]
+  },
+  "zoomToSelection": {
+    "macKeys": ["⇧", "2"],
+    "winKeys": ["Shift", "2"]
+  },
+  "layoutGrids": {
+    "macKeys": ["⇧", "G"],
+    "winKeys": ["Shift", "G"]
+  },
+
+  "rename": {
+    "macKeys": ["⌘", "R"],
+    "winKeys": ["Ctrl", "R"]
+  }
+}

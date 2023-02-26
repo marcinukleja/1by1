@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avatar + Name</title>
+  <title>Fills</title>
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/navigation.css">
@@ -17,7 +17,7 @@
   </script>
 </head>
 
-<body>
+<body class="mac-platform">
   <nav id="navigation">
   <!-- BAR -->
 
@@ -93,7 +93,7 @@
   <!-- LIST -->
 
   <div id="list">
-    <h2><a href="http://192.168.1.8:4000">Home</a></h2>
+    <h2><a href="http://localhost:4000">Home</a></h2>
 
     
 
@@ -113,19 +113,19 @@
           </li>
         
           <li>
-            <a href="/chapter-01/01-03.html">Header container</a>
+            <a href="/chapter-01/01-03.html">Header background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-04.html">Avatar + Name</a>
+            <a href="/chapter-01/01-04.html">Fills</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-05.html">Row content </a>
+            <a href="/chapter-01/01-05.html">Avatar background</a>
           </li>
         
           <li>
-            <a href="/chapter-01/01-06.html">Row instances</a>
+            <a href="/chapter-01/01-06.html">Greetings</a>
           </li>
         
           <li>
@@ -323,8 +323,85 @@
 
 
   <main>
-    <h1>Avatar + Name</h1>
-    
+    <h1>Fills</h1>
+    <p>In this lesson you will change the color of the entire <strong>view</strong>, <strong>header background</strong>, and the <strong>Canvas</strong>.</p>
+
+<h2 id="open-color-picker">Open color picker</h2>
+
+<ol>
+  <li>Select recently created rectangle.</li>
+  <li>In the <strong>Design</strong> panel find the <strong>Fill</strong> section.</li>
+  <li>Click on the small square in the <strong>Fill</strong> section representing current fill of the rectangle. So‑called <strong>Color picker</strong> should appear.</li>
+</ol>
+
+<h2 id="experiment-with-color-picker">Experiment with color picker</h2>
+
+<ol>
+  <li>Click-and-drag in the square area to change <strong>Saturation</strong> and <strong>Brightness/Lightness</strong> of the selected <strong>Hue</strong>.</li>
+  <li>Change the <strong>Hue</strong> slider freely (the one with spectrum gradient).</li>
+  <li>Manipulate <strong>Alpha</strong> values (transparency) for selected color.</li>
+  <li>Check available <strong>color models</strong> from the 3-letter picker.
+    <blockquote>
+      <p>Unfortunately, none of these color models – despite being extremely popular – will help you find colors based on their <strong>perceptual lightness</strong>, convenient for accessibility-focused design.</p>
+    </blockquote>
+  </li>
+  <li>Notice how input fields change while you modify values above.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Color theory</strong> is extremely important topic in UI design. This guide does not cover it, but I encourage you to learn more about it if you think seriously about designing digital interfaces.</p>
+</blockquote>
+
+<h2 id="change-rectangles-fill">Change rectangle’s fill</h2>
+
+<ol>
+  <li>Make sure you have <code>Header background</code> rectangle selected and <strong>color picker</strong> opened.</li>
+  <li>Make sure <strong>Alpha</strong> slider is maxed out. It should be <code>100%</code>.</li>
+  <li>In the square picker area on the top, click-and-drag circular indicator to top-left corner. It doesn’t matter which color model you’re using. That ensures you are picking pure white color.</li>
+  <li>Close <strong>color picker</strong> with <strong>x icon</strong>.</li>
+</ol>
+
+<p>In the <strong>Fill</strong> section you should see white square and <code>FFFFFF</code> value with <code>100%</code> (alpha) next to it.</p>
+
+<h2 id="change-frames-fill">Change Frame’s fill</h2>
+
+<p>By looking on the <strong>Canvas</strong>, you probably can see that the <code>Header background</code> and the entire view have the same white fill. Luckily, <strong>Frames</strong> have fill section in the <strong>Design</strong> panel as well.</p>
+
+<ol>
+  <li>Select <code>Start</code> frame by clicking on its name or selecting it from the <code>Layers</code> panel.</li>
+  <li>This time, don’t open color picker and just click on the color value in the <strong>Fill</strong> section. For now it should be <code>FFFFFF</code>.
+    <blockquote>
+      <p>This 6-character value is <strong>hexadecimal</strong> representation of a color. Each 2 characters are the values of <strong>red</strong>, <strong>green</strong> and <strong>blue</strong> components. <code>FFFFFF</code> is a pure white color.</p>
+    </blockquote>
+  </li>
+  <li>Change it to <code>F1F1F1</code> and press<kbd class="mac-key"><kbd>⏎ Enter</kbd></kbd><kbd class="win-key"><kbd>Enter</kbd></kbd>.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Tip:</strong> You can type just <code>F1</code> and Figma will repeat it for each component value.</p>
+</blockquote>
+
+<p>Chosen color is a very light gray but dark enough to make <code>Header background</code> visible. Toggle <strong>Grid</strong> off (<kbd class="mac-key"><kbd>⇧</kbd><kbd>G</kbd></kbd><kbd class="win-key"><kbd>Shift</kbd><kbd>G</kbd></kbd>) to see it more clearly.</p>
+
+<h2 id="change-canvas-background-color">Change canvas background color</h2>
+
+<p>If you’re using Figma in so-called <strong>Light Theme</strong> (default) your <strong>Canvas</strong> color is very light and has almost no contrast with our <code>Start</code> view’s background.</p>
+
+<ol>
+  <li>Make sure you have no layers selected. The easiest way to deselect all is to press <kbd class="mac-key"><kbd>⎋ Esc</kbd></kbd><kbd class="win-key"><kbd>Esc</kbd></kbd> or to click on the <strong>Canvas</strong>.</li>
+  <li>In the <strong>Design</strong> panel, on the very top, look at the <strong>Background</strong> section. Depending on your active theme it might have different various like <code>F5F5F5</code>.</li>
+  <li>Click on this value and just type <code>D</code> and hit <kbd class="mac-key"><kbd>⏎ Enter</kbd></kbd><kbd class="win-key"><kbd>Enter</kbd></kbd>. Figma should automatically set the value to <code>DDDDDD</code>.</li>
+</ol>
+
+<p>Now, the background color should be a bit darker than our <code>Start</code> <strong>Frame</strong> so its bounds are clearly distinguished.</p>
+
+<blockquote>
+  <p><strong>Canvas</strong> background color has no impact on your design. This setting is mainly for a presentation purposes and work convenience.</p>
+</blockquote>
+
+<hr />
+
+<p>In this lesson you learned the basics of changing the <strong>fill</strong> color of <strong>rectangle</strong> and a <strong>frame</strong>, as well as setting the <strong>canvas</strong> background.</p>
 
   </main>
 
@@ -333,7 +410,7 @@
   <a id="prevLessonButton" class="button" href="/chapter-01/01-03.html">Previous</a>
    
   <a id="nextLessonButton" class="button button-next" href="/chapter-01/01-05.html"
-    >Row content </a
+    >Avatar background</a
   >
   
 </footer>
